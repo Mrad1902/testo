@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5b7315c09d.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="style.css">
+    <title>site web de battiment</title>
+</head>
+<body>
+    <!-- start nav bar -->
+ <nav class="nav-bar">
+<div class="container">
+    <div class="burger-icon" onclick="displaynavbar()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="logo" >
+    <img src="logo.png" alt="">
+    </div>
+    <div class="menu ">
+        <a class="active" href="index.html"><i class="fa-solid fa-house"></i> Accueil</a>
+        <a href="#"><i class="fa-solid fa-person-digging"></i> Nos Projets</a>
+        <a href="#"><i class="fa-solid fa-paper-plane"></i> Contactez-Nous</a>
+    <div onclick="closer()" class="close">
+        <i  class="fa-solid fa-xmark "></i>
+    </div>
+
+
+
+    </div>
+   <div class="contact"> <a href="">Contactez-Nous</a></div>
+
+
+
+
+
+
+</div>
+
+
+
+ </nav>
+    
+
+
+
+    <!-- end nav bar -->
+
+    <!--start home -->
+<section class="home">
+    <div class="back">
+           <h1>EFFEL MULTISERVICES </h1> 
+           <p>Societe de Batiment et Travaux Publics</p>
+     <div class="btns">
+        <a class="sp" href="">learn more </a>
+        <a href="">see our projects </a>
+     </div>   
+    </div>
+</section>
+
+    <!--end home -->
+<!--start about-->
+<section class="about">
+    <h1 class="main-title">Qui Sommes Nous ?</h1>
+  <div class="container">
+    <div class="image"><img src="des1.jpg" alt=""></div>
+       
+       <p>je suis Mohamed Amine , etudiant en esprit cycle d'ingenieure specialise en informatique. Mon objectif est d'avoir assez d'experiences et de connaissances pour acquerir le carriere de mes reves. Je suis quelequ'un qui est creatif.</p>
+        
+
+</div>
+  
+</section>
+
+
+<!--end about-->
+
+<!-- start contact-->
+<section class="contacter-nous">
+<h1 class="main-title">Contactez-Nous</h1>    <div class="container">
+ <div class="image">   <img src="des1.jpg" alt=""></div>
+        <form action="">
+            <div class="text" required> 
+                <label for="">Votre Nom</label>
+                 <input type="text" >
+           
+            </div>
+            <div class="text" required> 
+                <label class="hello" for="">Votre E-mail</label>
+                 <input type="email" >
+           
+            </div>
+            <div class="text"> 
+                <label for="">Objet</label>
+                 <input type="text"  >
+           
+            </div>
+            <div class="text"> 
+                <label for="">Message</label>
+                 <textarea name="" id="" cols="30" rows="10"></textarea>
+           
+            </div>
+            
+
+
+
+        </form>
+    </div>
+</section>
+
+
+<!-- end contact-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+var m=document.querySelector('.menu')
+var links=document.querySelectorAll('.menu a')
+var sec=document.querySelector('.about')
+var img=document.querySelector('.image')
+var klem=document.querySelector('.about p')
+
+window.onscroll = function() {
+    if(window.scrollY >= sec.offsetTop - 200 ){
+img.style.transform="translateX(0)"; 
+klem.style.transform="translateX(0)"; 
+
+
+ }
+};
+
+function closer(){
+    m.style.transform="translateX(-100%)";
+}
+
+
+function displaynavbar(){
+    m.style.transform="translateX(0)";
+}
+function f(){
+    links.forEach((e)=>{
+e.classList.remove('active')
+
+}
+)
+   this.classList.add('active')
+
+}
+links.forEach((e)=>{
+e.addEventListener('click',f)
+
+}
+)
+
+
+
+    </script>
+
+</body>
+</html>
